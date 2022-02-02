@@ -13,6 +13,13 @@
     <project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
     <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
   </properties>
+
+  <repositories>
+    <repository>
+      <id>Klighd-Snapshot-Repo</id>
+      <url>https://rtsys.informatik.uni-kiel.de/~kieler/files/klighd-maven-artifacts/klighd-snapshots/</url>
+    </repository>
+  </repositories>
   
   <dependencyManagement>
     <dependencies>
