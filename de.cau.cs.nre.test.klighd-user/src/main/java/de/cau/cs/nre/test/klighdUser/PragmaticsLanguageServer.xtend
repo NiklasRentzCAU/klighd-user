@@ -13,6 +13,7 @@
 package de.cau.cs.nre.test.klighdUser
 
 import de.cau.cs.kieler.klighd.lsp.launch.AbstractLanguageServer
+import de.cau.cs.kieler.klighd.standalone.KlighdStandaloneSetup
 
 /**
  * Entry point for the language server application for the KIELER Pragmatics project based around the KGraph language.
@@ -22,9 +23,16 @@ import de.cau.cs.kieler.klighd.lsp.launch.AbstractLanguageServer
  */
 class PragmaticsLanguageServer extends AbstractLanguageServer {
     
-    def static main(String[] args) {
-        val server = new PragmaticsLanguageServer
-        server.configureAndRun(new PragmaticsLanguageRegistration, new PragmaticsLsCreator)
+    def static void main(String[] args) {
+        try {
+            KlighdStandaloneSetup.initialize();
+            
+            val server = new PragmaticsLanguageServer
+            server.configureAndRun(new PragmaticsLanguageRegistration, new PragmaticsLsCreator)
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
+        }
     }
     
 }
