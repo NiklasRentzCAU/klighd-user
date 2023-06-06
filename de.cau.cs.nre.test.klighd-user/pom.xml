@@ -16,6 +16,10 @@
 
   <repositories>
     <!-- <repository>
+      <id>Sonatype-Snapshot-Repository</id>
+      <url>https://s01.oss.sonatype.org/content/groups/staging</url>
+    </repository> -->
+    <!-- <repository>
       <id>Klighd-Snapshot-Repo</id>
       <url>https://rtsys.informatik.uni-kiel.de/~kieler/files/repo/</url>
     </repository> -->
@@ -42,7 +46,7 @@
       <dependency>
         <groupId>de.cau.cs.kieler.klighd</groupId>
         <artifactId>de.cau.cs.kieler.kgraph.text.ide</artifactId>
-        <version>2.2.1-SNAPSHOT</version>
+        <version>2.3.0.v20230606</version>
         <exclusions>
           <exclusion>
             <groupId>org.eclipse.platform</groupId>
@@ -53,7 +57,7 @@
       <dependency>
         <groupId>de.cau.cs.kieler.klighd</groupId>
         <artifactId>de.cau.cs.kieler.klighd.incremental</artifactId>
-        <version>2.2.1-SNAPSHOT</version>
+        <version>2.3.0.v20230606</version>
         <exclusions>
           <exclusion>
             <groupId>org.eclipse.platform</groupId>
@@ -64,7 +68,7 @@
       <dependency>
         <groupId>de.cau.cs.kieler.klighd</groupId>
         <artifactId>de.cau.cs.kieler.klighd.lsp</artifactId>
-        <version>2.2.1-SNAPSHOT</version>
+        <version>2.3.0.v20230606</version>
         <exclusions>
           <exclusion>
             <groupId>org.eclipse.platform</groupId>
@@ -75,7 +79,7 @@
       <dependency>
         <groupId>de.cau.cs.kieler.klighd</groupId>
         <artifactId>de.cau.cs.kieler.klighd</artifactId>
-        <version>2.2.1-SNAPSHOT</version>
+        <version>2.3.0.v20230606</version>
         <exclusions>
           <exclusion>
             <groupId>org.eclipse.platform</groupId>
@@ -100,22 +104,22 @@
     <dependency>
       <groupId>de.cau.cs.kieler.klighd</groupId>
       <artifactId>de.cau.cs.kieler.kgraph.text.ide</artifactId>
-      <version>2.2.1-SNAPSHOT</version>
+      <version>2.3.0.v20230606</version>
     </dependency>
     <dependency>
       <groupId>de.cau.cs.kieler.klighd</groupId>
       <artifactId>de.cau.cs.kieler.klighd.incremental</artifactId>
-      <version>2.2.1-SNAPSHOT</version>
+      <version>2.3.0.v20230606</version>
     </dependency>
     <dependency>
       <groupId>de.cau.cs.kieler.klighd</groupId>
       <artifactId>de.cau.cs.kieler.klighd.lsp</artifactId>
-      <version>2.2.1-SNAPSHOT</version>
+      <version>2.3.0.v20230606</version>
     </dependency>
     <dependency>
       <groupId>de.cau.cs.kieler.swt.mock</groupId>
       <artifactId>org.eclipse.swt</artifactId>
-      <version>0.1.0-SNAPSHOT</version>
+      <version>0.1.0</version>
     </dependency>
     <dependency>
       <groupId>org.eclipse.elk</groupId>
