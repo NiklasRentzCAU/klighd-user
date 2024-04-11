@@ -13,7 +13,7 @@
 package de.cau.cs.nre.test.klighdUser
 
 import de.cau.cs.kieler.klighd.lsp.launch.AbstractLanguageServer
-import de.cau.cs.kieler.klighd.standalone.KlighdStandaloneSetup
+import de.cau.cs.kieler.klighd.setup.KlighdStandaloneSetup
 
 /**
  * Entry point for the language server application for the KIELER Pragmatics project based around the KGraph language.
