@@ -18,7 +18,8 @@
 //package de.cau.cs.nre.test.klighdUser;
 //
 //import de.cau.cs.kieler.klighd.Klighd;
-//import de.cau.cs.kieler.klighd.standalone.KlighdStandaloneSetup;
+//import de.cau.cs.kieler.klighd.setup.KlighdStandaloneSetup;
+//import de.cau.cs.kieler.pragmatics.language.server.PragmaticsLanguageServer;
 //
 ///**
 // * Testing some KLighD functionality from command line while only using a plain Maven pom build
@@ -35,6 +36,7 @@
 //            System.out.println("Hello World!");
 //            KlighdStandaloneSetup.initialize();
 //            System.out.println(Klighd.IS_PLATFORM_RUNNING);
+//            PragmaticsLanguageServer.main(args);
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //            throw e;
