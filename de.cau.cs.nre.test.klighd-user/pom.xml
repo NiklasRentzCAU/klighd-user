@@ -7,8 +7,8 @@
   <description>Test project testing using KLighD using Maven only</description>
   
   <properties>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
     <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
@@ -23,30 +23,18 @@
       <id>Klighd-Snapshot-Repo</id>
       <url>https://rtsys.informatik.uni-kiel.de/~kieler/files/repo/</url>
     </repository> -->
-    <!-- <repository>
+    <repository>
       <id>Klighd-Local-Snapshot</id>
-      <url>file://~/kieler-semantics-keith-2022-06/git/KLighD/klighd-snapshots/</url>
-    </repository> -->
+      <url>file://~/git/KLighD/klighd-snapshots/</url>
+    </repository>
   </repositories>
   
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>org.eclipse.platform</groupId>
-        <artifactId>org.eclipse.ui.workbench</artifactId>
-        <version>3.131.0</version>
-        <exclusions>
-          <!-- This exclusion is temporarily added to fix another missing Maven artifact of Eclipse's dependencies, https://bugs.eclipse.org/bugs/show_bug.cgi?id=569770 -->
-          <exclusion>
-            <groupId>javax.annotation</groupId>
-            <artifactId>javax.annotation-api</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
         <groupId>de.cau.cs.kieler.klighd</groupId>
         <artifactId>de.cau.cs.kieler.kgraph.text.ide</artifactId>
-        <version>3.0.1.v20240410</version>
+        <version>3.1.0.v20250428</version>
         <exclusions>
           <exclusion>
             <groupId>org.eclipse.platform</groupId>
@@ -57,7 +45,7 @@
       <dependency>
         <groupId>de.cau.cs.kieler.klighd</groupId>
         <artifactId>de.cau.cs.kieler.klighd.lsp</artifactId>
-        <version>3.0.1.v20240410</version>
+        <version>3.1.0.v20250428</version>
         <exclusions>
           <exclusion>
             <groupId>org.eclipse.platform</groupId>
@@ -68,7 +56,7 @@
       <dependency>
         <groupId>de.cau.cs.kieler.klighd</groupId>
         <artifactId>de.cau.cs.kieler.klighd</artifactId>
-        <version>3.0.1.v20240410</version>
+        <version>3.1.0.v20250428</version>
         <exclusions>
           <exclusion>
             <groupId>org.eclipse.platform</groupId>
@@ -76,26 +64,20 @@
           </exclusion>
         </exclusions>
       </dependency>
-      <!-- A dependency that Maven artifacts of Eclipse bundles tries to pull the (non-existent) version 1.0.0 from. This version exists and will be used instead. -->
-      <dependency>
-        <groupId>xml-apis</groupId>
-        <artifactId>xml-apis-ext</artifactId>
-        <version>1.3.04</version>
-      </dependency>
     </dependencies>
   </dependencyManagement>
   
   <dependencies>
     <!-- comment out if only KLighD and not pragmatics should be tested. Contains the KGraphDiagramSynthesis for better .kgt visualizations. -->
-    <dependency>
+    <!-- <dependency>
       <groupId>de.cau.cs.kieler</groupId>
       <artifactId>de.cau.cs.kieler.pragmatics.language.server</artifactId>
       <version>0.51.0.v20240410</version>
-    </dependency>
+    </dependency> -->
     <dependency>
       <groupId>org.eclipse.xtext</groupId>
       <artifactId>org.eclipse.xtext.xbase.lib</artifactId>
-      <version>2.33.0</version>
+      <version>2.37.0</version>
     </dependency>
     <dependency>
       <groupId>com.google.inject</groupId>
@@ -105,12 +87,12 @@
     <dependency>
       <groupId>de.cau.cs.kieler.klighd</groupId>
       <artifactId>de.cau.cs.kieler.kgraph.text.ide</artifactId>
-      <version>3.0.1.v20240410</version>
+      <version>3.1.0.v20250428</version>
     </dependency>
     <dependency>
       <groupId>de.cau.cs.kieler.klighd</groupId>
       <artifactId>de.cau.cs.kieler.klighd.lsp</artifactId>
-      <version>3.0.1.v20240410</version>
+      <version>3.1.0.v20250428</version>
     </dependency>
     <dependency>
       <groupId>de.cau.cs.kieler.swt.mock</groupId>
@@ -120,12 +102,12 @@
     <dependency>
       <groupId>org.eclipse.elk</groupId>
       <artifactId>org.eclipse.elk.graph.text</artifactId>
-      <version>0.9.1</version>
+      <version>0.10.0</version>
     </dependency>
     <dependency>
       <groupId>org.eclipse.elk</groupId>
       <artifactId>org.eclipse.elk.graph.text.ide</artifactId>
-      <version>0.9.1</version>
+      <version>0.10.0</version>
     </dependency>
   </dependencies>
   
@@ -135,7 +117,7 @@
       <plugin>
         <groupId>org.eclipse.xtend</groupId>
         <artifactId>xtend-maven-plugin</artifactId>
-        <version>2.33.0</version>
+        <version>2.37.0</version>
         <executions>
           <execution>
             <goals>
